@@ -1,0 +1,112 @@
+ {%  extends "basetemplate.html" %}
+ {% load static %}
+ {% block contenido %}
+
+
+  <!-- header -->
+  <header>
+    <!-- header inner -->
+    <div class="header-top">
+      <div class="header">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xl-2 col-lg-4 col-md-4 col-sm-3 col logo_section">
+              <div class="full">
+                <div class="center-desk">
+                  <div class="logo">
+                    <a href="{% url "inicio" %}"><img src="{% static "Agrodigital/icon/logo negro.png"%}" alt="#" /></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-10 col-lg-8 col-md-8 col-sm-9">
+
+               <div class="menu-area">
+                <div class="limit-box">
+                  <nav class="main-menu ">
+                    <ul class="menu-area-main">
+                      <li class="active"> <a href="{% url "inicio" %}">Home</a> </li>
+                      <li> <a href="{% url "listapreguntas" %}">Encuesta</a> </li>
+                      <li> <a href="{% url "inicio" %}">Contactenos</a> </li>
+
+                     </ul>
+                   </nav>
+                 </div>
+               </div>
+              </div>
+           </div>
+         </div>
+       </div>
+     </div>
+     <!-- end header inner -->
+
+     <!-- end header -->
+     <section class="section">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+
+            <div class="container-fluid padding_dd">
+              <div class="carousel-caption">
+                <div class="row">
+                  <div class="divider">
+                    <div class="text-bg">
+                     <span>Grado de Transformación Digital en Agrícolas</span>
+                      <h1>Chequeo Digital</h1>
+                          <h3> En el actual escenario de cambios ambientales globales se considera una necesidad impulsar iniciativas que fomenten e instruyan el uso racional de los componentes del medio ambiente mediante pequeños cambios que aporten un gran valor, este diagnóstico se enfoca en el sector agrícola. Por otro lado, se destaca la importancia de una gestión efectiva y consistente de la innovación, para ayudar a crear conciencia de las habilidades necesarias para la Transformación Digital, no solo involucrando un marco puramente tecnológico. El objetivo de este chequeo del nivel de transformación digital es:
+                      </h3>
+                        <div class="form-group">
+                        <ul class="list">
+
+                        <li class="list-group-item-primary">Evaluar el grado de madurez digital de empresas del sector agrícolas, mediante un modelo que permita medir el nivel de transformación digital. Para la evaluación de los ítems presentados se evaluaran las preguntas en un rango del 1 al 5, siendo 1 la expresión de la mínima satisfacción y el 5 la máxima satisfacción.</li>
+                        </li>
+
+                        </ul>
+                            </div>
+                       <a href="{% url "listapreguntas" %}">Ir a la encuesta</a>
+                    </div>
+                  </div>
+                  <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                    <div class="images_box">
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+
+            <div class="container-fluid padding_dd">
+              <div class="carousel-caption">
+
+
+
+                  </div>
+                  <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                    <div class="images_box">
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+</div>
+</header>
+
+
+
+
+  {% endblock %}
