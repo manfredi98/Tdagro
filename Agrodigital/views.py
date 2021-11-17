@@ -16,6 +16,8 @@ class vistapreguntas(CreateView):
     fields = "__all__"
     success_url = "/"
 
+
+
 def p1accion1(request):
     return render(request, "plan1dim1.html")
 

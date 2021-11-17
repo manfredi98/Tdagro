@@ -67,16 +67,16 @@ class encuesta(models.Model):
 
 # inicio dimension "Digitalizacion de procesos"
 
-    choices14 = (("1", "1-.Muy poco o nada"), ("2", "2-. "), ("3", "3 -.medianamente"), ("4", "4-.casi siempre"), ("5", "5-. siempre"))
+    choices14 = (("1", "1-.Muy poco o nada"), ("2", "2-.se planea ejecutar "), ("3", "3 -.medianamente"), ("4", "4-.casi siempre"), ("5", "5-. siempre"))
     p1_dim4 = models.CharField(" 1-. En cuanto a los procesos de su empresa:  Las labores manuales ahora se ejecutan con dispositivos tecnológicos ",max_length=1, choices=choices14)
 
-    choices15 = (("1", "1-.Muy poco o nada"), ("2", "2-. "), ("3", "3 -.medianamente"), ("4", "4-.casi siempre"), ("5", "5-. siempre"))
+    choices15 = (("1", "1-.Muy poco o nada"), ("2", "2-.se planea usar"), ("3", "3 -.medianamente"), ("4", "4-.casi siempre"), ("5", "5-. siempre"))
     p2_dim4 = models.CharField(" 2-. En cuanto a los procesos de su empresa:  Usan programas de gestión de recursos (ERP, CRM, SAP, otros) ?",max_length=1, choices=choices15)
 
-    choices16 = (("1", "1-.Muy poco o nada"), ("2", "2-. "), ("3", "3 -.medianamente"), ("4", "4-.casi siempre"), ("5", "5-. siempre"))
+    choices16 = (("1", "1-.Muy poco o nada"), ("2", "2-.se planea evaluar"), ("3", "3 -.medianamente"), ("4", "4-.casi siempre"), ("5", "5-. siempre"))
     p3_dim4 = models.CharField(" 3-. En cuanto a los procesos de su empresa: Evalúan el uso de tecnologías para uso de agroquímicos, riego, monitoreo, empaquetado, producción, otros procesos ?",max_length=1, choices=choices16)
 
-    choices17 = (("1", "1-.Muy poco o nada"), ("2", "2-. "), ("3", "3 -.medianamente"), ("4", "4-.casi siempre"), ("5", "5-. siempre"))
+    choices17 = (("1", "1-.Muy poco o nada"), ("2", "2-.se planea monitorear"), ("3", "3 -.medianamente"), ("4", "4-.casi siempre"), ("5", "5-. siempre"))
     p4_dim4 = models.CharField(" 4-. En cuanto a los procesos de su empresa: Hay monitoreo en tiempo real del estado de los procesos ?",max_length=1, choices=choices17)
 
 # Fin dimension "Digitalizacion de procesos"
@@ -85,22 +85,22 @@ class encuesta(models.Model):
 
 # inicio dimension "Equipo de trabajo o empleados"
 
-    choices18 = (("1", "1-.Muy poco o nada"), ("2", "2-. "), ("3", "3 -.medianamente"), ("4", "4-.casi siempre"), ("5", "5-. siempre"))
+    choices18 = (("1", "1-.Muy poco o nada"), ("2", "2-.no se considera relevante"), ("3", "3 -.medianamente"), ("4", "4-.casi siempre"), ("5", "5-. siempre"))
     p1_dim5 = models.CharField("1-.En cuanto a su empresa y la relación con sus empleados, en que grado considera las habilidades tecnológicas ?",max_length=1, choices=choices18)
 
-    choices19 = (("1", "1-.Muy poco o nada"), ("2", "2-. "), ("3", "3 -.medianamente"), ("4", "4-.casi siempre"), ("5", "5-. siempre"))
-    p2_dim5 = models.CharField("2-. En cuanto a su empresa y la relación con sus empleados, cuenta con personal calificado en tecnología que cambian la manera de funcionar ?",max_length=1, choices=choices19)
+    choices19 = (("1", "1-.Muy poco o nada"), ("2", "2-.se planea contratar"), ("3", "3 -.medianamente"), ("4", "4-.casi siempre"), ("5", "5-. siempre"))
+    p2_dim5 = models.CharField("2-.En cuanto a su empresa y la relación con sus empleados, cuenta con personal calificado en tecnología que cambian la manera de funcionar ?",max_length=1, choices=choices19)
 
-    choices20 = (("1", "1-.Muy poco o nada"), ("2", "2-. "), ("3", "3 -.medianamente"), ("4", "4-.casi siempre"), ("5", "5-. siempre"))
-    p3_dim5 = models.CharField("3-. En cuanto a su empresa y la relación con sus empleados, cuenta con personal calificado en tecnología que cambian la manera de funcionar ?",max_length=1, choices=choices20)
+    choices20 = (("1", "1-.Muy poco o nada"), ("2", "2-.se planea contratar"), ("3", "3 -.medianamente"), ("4", "4-.casi siempre"), ("5", "5-. siempre"))
+    p3_dim5 = models.CharField("3-.En cuanto a su empresa y la relación con sus empleados, cuenta con personal calificado en tecnología que cambian la manera de funcionar ?",max_length=1, choices=choices20)
 
-    choices21 = (("1", "1-. muy poco o nada"), ("2", "2-. "), ("3", "3 -.medianamente"), ("4", "4-.casi siempre"), ("5", "5-. siempre"))
-    p4_dim5 = models.CharField("4-. En cuanto a su empresa y la relación con sus empleados, cuenta con personal calificado en tecnología que cambian la manera de funcionar ?",max_length=1, choices=choices21)
+    choices21 = (("1", "1-. muy poco o nada"), ("2", "2-.se planea contratar "), ("3", "3 -.medianamente"), ("4", "4-.casi siempre"), ("5", "5-. siempre"))
+    p4_dim5 = models.CharField("4-.En cuanto a su empresa y la relación con sus empleados, cuenta con personal calificado en tecnología que cambian la manera de funcionar ?",max_length=1, choices=choices21)
 
-    choices22 = (("1", "1-.Muy poco o nada"), ("2", "2-. "), ("3", "3 -.medianamente"), ("4", "4-.casi siempre"), ("5", "5-. siempre"))
-    p5_dim5 = models.CharField("5-. En cuanto a su empresa y la relación con sus empleados, Cuenta con personal calificado para resolver problemas digitales ?",max_length=1, choices=choices22)
+    choices22 = (("1", "1-.Muy poco o nada"), ("2", "2-.se planea contratar "), ("3", "3 -.medianamente"), ("4", "4-.casi siempre"), ("5", "5-. siempre"))
+    p5_dim5 = models.CharField("5-.En cuanto a su empresa y la relación con sus empleados, Cuenta con personal calificado para resolver problemas digitales ?",max_length=1, choices=choices22)
 
-    choices23 = (("1", "1-.Muy poco o nada"), ("2", "2-. "), ("3", "3 -.intermedio"), ("4", "4-.alto"), ("5", "5-. excelente"))
+    choices23 = (("1", "1-.Muy bajo"), ("2", "2-.pensamos capacitar "), ("3", "3 -.intermedio"), ("4", "4-.alto"), ("5", "5-. excelente"))
     p6_dim5 = models.CharField("6-. En cuanto a su empresa y la relación con sus empleados, Cuál es el grado de manejo en el uso de tecnologías ?",max_length=1, choices=choices23)
 
 
@@ -119,8 +119,19 @@ class modelo(models.Model):
 class resultadodimension1(models.Model):
 
     criterio1 =models.FloatField("Criterio 1")
-    criterio2 =models.FloatField("Criterio 1")
-    criterio3 =models.FloatField("Criterio 1")
-    criterio4 =models.FloatField("Criterio 1")
-    criterio5 =models.FloatField("Criterio 1")
+    criterio2 =models.FloatField("Criterio 2")
+    criterio3 =models.FloatField("Criterio 3")
+    criterio4 =models.FloatField("Criterio 4")
+    criterio5 =models.FloatField("Criterio 5")
 
+class Calculo(models.Model):
+    valor1 = models.DecimalField(max_digits=10, decimal_places=2)
+    valor2 = models.DecimalField(max_digits=10, decimal_places=2)
+    valor3 = models.DecimalField(max_digits=10, decimal_places=2)
+    valor4 = models.DecimalField(max_digits=10, decimal_places=2)
+    valor5 = models.DecimalField(max_digits=10, decimal_places=2)
+    total = models.DecimalField(max_digits=10, decimal_places=2)
+
+    @property
+    def suma_valores(self):
+        return (self.valor1 + self.valor2+ self.valor3+ self.valor4+ self.valor5)
