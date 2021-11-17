@@ -9,15 +9,12 @@ def home(request):
 def planes(request):
     return render(request, "planesdeaccion.html")
 
-class listapreguntas(ListView):
-    template_name = "preguntas.html"
-    model = encuesta
-    context_object_name = "preguntas/"
 
 class vistapreguntas(CreateView):
     template_name = "preguntas.html"
     model = encuesta
-    success_url = "preguntas/"
+    fields = "__all__"
+    success_url = "/"
 
 def p1accion1(request):
     return render(request, "plan1dim1.html")

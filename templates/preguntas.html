@@ -2,72 +2,52 @@
  {% load static %}
  {% block contenido %}
 
+     <!-- Page Header Start -->
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="text-center">
+                        <h1>Preguntas</h1>
+                    </div>
+                        <h2><p class="p-2 bg-secondary text-white"> Para la evaluación de los ítems presentados se evaluaran las preguntas en un rango del 1 al 5, siendo 1 la expresión de la mínima satisfacción y el 5 la máxima satisfacción.</h2>
+                    </div>
+                    <div class="col-12">
 
-  <!-- header -->
-  <header>
-    <!-- header inner -->
-    <div class="header-top">
-      <div class="header">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-xl-2 col-lg-4 col-md-4 col-sm-3 col logo_section">
-              <div class="full">
-                <div class="center-desk">
-                  <div class="logo">
-                    <a href="{% url "inicio" %}"><img src="{% static "Agrodigital/icon/logo negro.png"%}" alt="#" /></a>
-                  </div>
+                    </div>
                 </div>
-              </div>
             </div>
-            <div class="col-xl-10 col-lg-8 col-md-8 col-sm-9">
+                 <div class="form-group">
 
-               <div class="menu-area">
-                <div class="limit-box">
-                  <nav class="main-menu ">
-                    <ul class="menu-area-main">
-                      <li class="active"> <a href="{% url "inicio" %}">Inicio</a> </li>
-
-                     <li> <a href="#"><img src="{% static "Agrodigital/icon/icon_b.png"%}" alt="#" /></a></li>
-                     </ul>
-                   </nav>
-                 </div>
-               </div>
-              </div>
-           </div>
-         </div>
-       </div>
-     </div>
-     <!-- end header inner -->
+            </div>
+        </div>
+        <!-- Page Header End -->
 
 
+        <!-- Autor Start -->
 
-<div>
-    <!doctype html>
-<html lang="en">
-  <thead>
-    <tr>
-    <title>aun no puedo plasmar modelo de encuesta</title>
-    <th scope ="col">preguntas</th>
-    </tr>
-    </thead>
+        <div class="addautor">
+            <div class="container">
+               <form method="post" > {% csrf_token %}
 
-  <body>
-    <h1>Hello, world!</h1>
+                   <div class="form-group">
 
-    {% for a in preguntas %}
-        <td>{{ a.choices1 }}</td>
-    {% endfor %}
-  </body>
-</html>
-</div>
-</header>
+                   </div>
 
-<!-- about  -->
+                   {{ form.as_p }}
 
 
+                   <button type="submit" class="btn btn-outline-primary">Agregar preguntas</button>
+                       <div class="form-check-input">
+
+                       </div>
+               </form>
+    <div class="form-group">
+
+    </div>
+            </div>
+        </div>
+        <!-- Service End -->
 
 
-<!-- end abouts -->
-
-
-  {% endblock %}
+ {% endblock %}
