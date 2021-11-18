@@ -5,7 +5,8 @@ from Agrodigital import views
 
 urlpatterns = [
     path('inicio/', home,name="inicio"),
-    path('preguntas/', views.vistapreguntas.as_view(), name="encuesta"  ),
+    path('preguntas/', views.listapreguntas.as_view(), name="encuesta"  ),
+    path('respuesta/', views.vistapreguntas.as_view(), name="formulariorespondido"),
     path('p1dim1/', p1accion1, name="plandeaccion"),
     path('p2dim1/', p2accion1, name="plandeaccion"),
     path('p3dim1/', p3accion1, name="plandeaccion"),

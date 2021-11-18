@@ -9,12 +9,18 @@ def home(request):
 def planes(request):
     return render(request, "planesdeaccion.html")
 
-
-class vistapreguntas(CreateView):
+class listapreguntas(CreateView):
     template_name = "preguntas.html"
     model = encuesta
     fields = "__all__"
     success_url = "/"
+
+class vistapreguntas(ListView):
+    template_name = "respuesta.html"
+    context_object_name =  "Respuesta"
+
+    def get_queryset(self):
+        listapreguntas
 
 def p1accion1(request):
     return render(request, "plan1dim1.html")

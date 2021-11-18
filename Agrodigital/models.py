@@ -1,5 +1,15 @@
 from django.db import models
 
+class modelo(models.Model):
+
+    pesoc1 = models.FloatField("Peso C1")
+    pesoc2 = models.FloatField("Peso C2")
+    pesoc3 = models.FloatField("Peso C3")
+    pesoc4 = models.FloatField("Peso C4")
+    pesoc5 = models.FloatField("Peso C5")
+
+    codigo = models.CharField(primary_key= True, max_length= 5)
+
 class encuesta(models.Model):
 
 # inicio dimension "Uso de Tecnologías digitales"
@@ -31,15 +41,11 @@ class encuesta(models.Model):
     choices7 = (("1", "1-.Muy poco o nada"), ("2", "2-.no sabemos"), ("3", "3 -.medianamente"), ("4", "4-.casi siempre"), ("5", "5-. siempre"))
     p4_dim2 = models.CharField(" 4-. En que grado modifica o adapta su modelo de negocios a las nuevas tecnologías",max_length=1, choices=choices7)
 
-
     choices8 = (("1", "1-.Muy poco o nada"), ("2", "2-.no sabemos"), ("3", "3 -.medianamente"), ("4", "4-.casi siempre"), ("5", "5-. siempre"))
     p5_dim2 = models.CharField(" 5-. En que grado ha incorporado programas o aplicaciones ",max_length=1, choices=choices8)
 
-
     choices9 = (("1", "1-.Muy poco o nada"), ("2", "2-.no sabemos"), ("3", "3 -.medianamente"), ("4", "4-.casi siempre"), ("5", "5-. siempre"))
     p6_dim2 = models.CharField(" 6-. ¿ En que grado ha incorporado programas o aplicaciones?  ", max_length=1, choices=choices9)
-
-
 
 # fin dimension ""Planificacion estrategica"
 
@@ -105,16 +111,6 @@ class encuesta(models.Model):
 
 
 # Fin dimension "Equipo de trabajo o empleados"
-
-class modelo(models.Model):
-
-    pesoc1 = models.FloatField("Peso C1")
-    pesoc2 = models.FloatField("Peso C2")
-    pesoc3 = models.FloatField("Peso C3")
-    pesoc4 = models.FloatField("Peso C4")
-    pesoc5 = models.FloatField("Peso C5")
-
-    codigo = models.CharField(primary_key= True, max_length= 5)
 
 class resultadodimension1(models.Model):
 
