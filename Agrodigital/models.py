@@ -118,20 +118,44 @@ class modelo(models.Model):
 
 class resultadodimension1(models.Model):
 
-    criterio1 =models.FloatField("Criterio 1")
-    criterio2 =models.FloatField("Criterio 2")
-    criterio3 =models.FloatField("Criterio 3")
-    criterio4 =models.FloatField("Criterio 4")
-    criterio5 =models.FloatField("Criterio 5")
+    criterio1_1 =models.FloatField("Criterio 1.1")
+    criterio2_1 =models.FloatField("Criterio 2.1")
+    criterio3_1 =models.FloatField("Criterio 3.1")
+    criterio4_1 =models.FloatField("Criterio 4.1")
+    criterio5_1 =models.FloatField("Criterio 5.1")
 
-class Calculo(models.Model):
-    valor1 = models.DecimalField(max_digits=10, decimal_places=2)
-    valor2 = models.DecimalField(max_digits=10, decimal_places=2)
-    valor3 = models.DecimalField(max_digits=10, decimal_places=2)
-    valor4 = models.DecimalField(max_digits=10, decimal_places=2)
-    valor5 = models.DecimalField(max_digits=10, decimal_places=2)
-    total = models.DecimalField(max_digits=10, decimal_places=2)
+class resultadodimension2(models.Model):
 
-    @property
-    def suma_valores(self):
-        return (self.valor1 + self.valor2+ self.valor3+ self.valor4+ self.valor5)
+    criterio1_2 =models.FloatField("Criterio 1.2")
+    criterio2_2 =models.FloatField("Criterio 2.2")
+    criterio3_2 =models.FloatField("Criterio 3.2")
+    criterio4_2 =models.FloatField("Criterio 4.2")
+    criterio5_2 =models.FloatField("Criterio 5.2")
+
+class resultadodimension3(models.Model):
+
+    criterio1_3 =models.FloatField("Criterio 1.3")
+    criterio2_3 =models.FloatField("Criterio 2.3")
+    criterio3_3 =models.FloatField("Criterio 3.3")
+    criterio4_3 =models.FloatField("Criterio 4.3")
+    criterio5_3 =models.FloatField("Criterio 5.3")
+
+class resultadodimension4(models.Model):
+
+    criterio1_4 =models.FloatField("Criterio 1.4")
+    criterio2_4 =models.FloatField("Criterio 2.4")
+    criterio3_4 =models.FloatField("Criterio 3.4")
+    criterio4_4 =models.FloatField("Criterio 4.4")
+    criterio5_4 =models.FloatField("Criterio 5.4")
+
+class resultadodimension5(models.Model):
+
+    criterio1_5 =models.FloatField("Criterio 1.5")
+    criterio2_5 =models.FloatField("Criterio 2.5")
+    criterio3_5 =models.FloatField("Criterio 3.5")
+    criterio4_5 =models.FloatField("Criterio 4.5")
+    criterio5_5 =models.FloatField("Criterio 5.5")
+
+
+
+
