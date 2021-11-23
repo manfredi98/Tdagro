@@ -12,6 +12,7 @@ class modelo(models.Model):
 
 class encuesta(models.Model):
 
+
 # inicio dimension "Uso de Tecnologías digitales"
 
     choices1 =  (("1", "1-. Las desconozco"), ("2", "2-. algo de conocimiento"), ("3", "3 -.intermedio"), ("4", "4-.conozco"), ("5", "5-.Las conozco muy bien"))
@@ -109,26 +110,54 @@ class encuesta(models.Model):
     choices23 = (("1", "1-.Muy bajo"), ("2", "2-.pensamos capacitar "), ("3", "3 -.intermedio"), ("4", "4-.alto"), ("5", "5-. excelente"))
     p6_dim5 = models.CharField("6-. En cuanto a su empresa y la relación con sus empleados, Cuál es el grado de manejo en el uso de tecnologías ?",max_length=1, choices=choices23)
 
-
 # Fin dimension "Equipo de trabajo o empleados"
 
-class resultadodimension1(models.Model):
+    class Meta:
+        abstract = True
+
+class resultadodimensiones(encuesta):
 
     criterio1_1 =models.FloatField("Criterio 1.1")
     criterio2_1 =models.FloatField("Criterio 2.1")
     criterio3_1 =models.FloatField("Criterio 3.1")
-    criterio4_1 =models.FloatField("Criterio 4.1")
-    criterio5_1 =models.FloatField("Criterio 5.1")
 
-class resultadodimension2(models.Model):
+    resul_dim1= models.FloatField("resultado dimesnion 1")
+
+    def get_dimension1(self):
+        self.criterio1_1 = int(self.p1_dim1) * 0.315
+        self.criterio2_1 = int(self.p2_dim1) * 0.315
+        self.criterio3_1 = int(self.p3_dim1) * 0.315
+
+        totaldimension = self.criterio1_1+self.criterio2_1+self.criterio3_1
+        return totaldimension
+
+    resul_dim1=property(get_dimension1)
+
+    ###################################################################################################################
 
     criterio1_2 =models.FloatField("Criterio 1.2")
     criterio2_2 =models.FloatField("Criterio 2.2")
     criterio3_2 =models.FloatField("Criterio 3.2")
     criterio4_2 =models.FloatField("Criterio 4.2")
     criterio5_2 =models.FloatField("Criterio 5.2")
+    criterio6_2 =models.FloatField("Criterio 6.2")
 
-class resultadodimension3(models.Model):
+    resul_dim2 = models.FloatField("resultado dimesnion 1")
+
+    def get_dimension2(self):
+        self.criterio1_2 = int(self.p1_dim2) * 0.021
+        self.criterio2_2 = int(self.p2_dim2) * 0.021
+        self.criterio3_2 = int(self.p3_dim2) * 0.021
+        self.criterio4_2 = int(self.p4_dim2) * 0.021
+        self.criterio5_2 = int(self.p5_dim2) * 0.021
+        self.criterio6_2 = int(self.p6_dim2) * 0.021
+
+        totaldimension1 = self.criterio1_2 + self.criterio2_2 + self.criterio3_2 + self.criterio4_2 + self.criterio5_2 + self.criterio6_2
+        return totaldimension1
+
+    resul_dim2 = property(get_dimension2)
+
+    ###################################################################################################################
 
     criterio1_3 =models.FloatField("Criterio 1.3")
     criterio2_3 =models.FloatField("Criterio 2.3")
@@ -136,21 +165,56 @@ class resultadodimension3(models.Model):
     criterio4_3 =models.FloatField("Criterio 4.3")
     criterio5_3 =models.FloatField("Criterio 5.3")
 
-class resultadodimension4(models.Model):
+    resul_dim3 = models.FloatField("resultado dimesnion 1")
+
+    def get_dimension2(self):
+        self.criterio1_3 = int(self.p1_dim3) * 0.007
+        self.criterio2_3 = int(self.p2_dim3) * 0.007
+        self.criterio3_3 = int(self.p3_dim3) * 0.007
+        self.criterio4_3 = int(self.p4_dim3) * 0.007
+
+        totaldimension2 = self.criterio1_3 + self.criterio2_3 + self.criterio3_3 + self.criterio4_3
+        return totaldimension2
+
+    ###################################################################################################################
 
     criterio1_4 =models.FloatField("Criterio 1.4")
     criterio2_4 =models.FloatField("Criterio 2.4")
     criterio3_4 =models.FloatField("Criterio 3.4")
     criterio4_4 =models.FloatField("Criterio 4.4")
-    criterio5_4 =models.FloatField("Criterio 5.4")
 
-class resultadodimension5(models.Model):
+    resul_dim4 = models.FloatField("resultado dimesnion 4")
+
+    def get_dimension2(self):
+        self.criterio1_4 = int(self.p1_dim4) * 0.009
+        self.criterio2_4 = int(self.p2_dim4) * 0.009
+        self.criterio3_4 = int(self.p3_dim4) * 0.009
+        self.criterio4_4 = int(self.p4_dim4) * 0.009
+
+        totaldimension4 = self.criterio1_4 + self.criterio2_4 + self.criterio3_4 + self.criterio4_4
+        return totaldimension4
+
+    ###################################################################################################################
 
     criterio1_5 =models.FloatField("Criterio 1.5")
     criterio2_5 =models.FloatField("Criterio 2.5")
     criterio3_5 =models.FloatField("Criterio 3.5")
     criterio4_5 =models.FloatField("Criterio 4.5")
     criterio5_5 =models.FloatField("Criterio 5.5")
+    criterio6_5 = models.FloatField("Criterio 5.5")
+
+    resul_dim4 = models.FloatField("resultado dimesnion 1")
+
+    def get_dimension5(self):
+        self.criterio1_5 = int(self.p1_dim5) * 0.315
+        self.criterio2_5 = int(self.p2_dim5) * 0.315
+        self.criterio3_5 = int(self.p3_dim5) * 0.315
+        self.criterio4_5 = int(self.p4_dim5) * 0.315
+        self.criterio5_5 = int(self.p5_dim5) * 0.315
+        self.criterio6_5 = int(self.p6_dim5) * 0.315
+
+        totaldimension5 = self.criterio1_5 + self.criterio2_5 + self.criterio3_5 + self.criterio4_5 + self.criterio5_5 + self.criterio6_5
+        return totaldimension5
 
 
 

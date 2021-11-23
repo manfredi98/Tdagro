@@ -15,6 +15,12 @@ class listapreguntas(CreateView):
     fields = "__all__"
     success_url = "/"
 
+class resultadospreguntas(CreateView):
+    template_name = "respuesta.html"
+    model = encuesta
+    fields = [""]
+    success_url = "/"
+
 class vistapreguntas(ListView):
     template_name = "respuesta.html"
     context_object_name =  "Respuesta"
