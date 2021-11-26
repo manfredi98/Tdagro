@@ -26,7 +26,11 @@ class vistapreguntas(ListView):
     context_object_name =  "Respuesta"
 
     def get_queryset(self):
-        listapreguntas
+        dim=self.kwargs['pk']
+        lista=encuesta.objects.filter(
+            id()
+        )
+        return lista
 
 def p1accion1(request):
     return render(request, "plan1dim1.html")
