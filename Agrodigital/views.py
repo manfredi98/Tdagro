@@ -15,14 +15,15 @@ class listapreguntas(CreateView):
     fields = "__all__"
     success_url = "/"
 
-class resultadospreguntas(CreateView):
+class resultadospreguntas(ListView):
     template_name = "respuesta.html"
     model = encuesta
-    fields = [""]
+    fields = ["p1_dim1", "p2_dim1", "p3_dim1", "p1_dim2","p2_dim2", "p3_dim2", "p4_dim2", "p5_dim2", "p6_dim2", "p1_dim3", "p2_dim3", "p3_dim3", "p4_dim3", "p1_dim4", "p2_dim4", "p3_dim4", "p4_dim4",
+              "p1_dim5", "p2_dim5", "p3_dim5", "p4_dim5"]
     success_url = "/"
 
 class vistapreguntas(ListView):
-    template_name = "respuesta.html"
+    template_name = "respuesta_final.html"
     context_object_name =  "Respuesta"
 
     def get_queryset(self):

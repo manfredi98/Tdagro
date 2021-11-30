@@ -152,7 +152,6 @@ class resultadodimensiones(encuesta):
     criterio2_3 =models.FloatField("Criterio 2.3")
     criterio3_3 =models.FloatField("Criterio 3.3")
     criterio4_3 =models.FloatField("Criterio 4.3")
-    criterio5_3 =models.FloatField("Criterio 5.3")
     resul_dim3 = models.FloatField("Resultado Dimensión 3")
 
     def get_dimension3(self):
